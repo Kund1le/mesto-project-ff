@@ -1,0 +1,38 @@
+.content {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.popup__content {
+  max-width: 430px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 34px 36px;
+}
+
+@media screen and (max-width: 568px) {
+  .popup__content {
+    width: 100%;
+    max-width: calc(100% - 80px);
+    margin-top: 40px;
+    padding: 30px 20px;
+  }
+}
+
+.popup__content_content_image {
+  max-width: 75vw;
+  max-height: 75vh;
+  height: auto;
+  width: auto;
+  display: flex;
+  background: transparent;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0;
+}
