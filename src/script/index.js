@@ -43,12 +43,6 @@ function handleEditFormSubmit(evt) {
       profileDescription.textContent = userData.about;
       closeModal(popups.editName.popup);
     })
-    .catch((err) => {
-      console.error(`Ошибка: ${err}`);
-    })
-    .finally(() => {
-      renderLoading(false, evt.submitter)
-    })
   }
   handleSubmit(makeRequest, evt);
 }
@@ -60,12 +54,6 @@ function handleEditAvatarSubmit(evt) {
     .then((data) => {
       profileImage.style = `background-image: url('${data.avatar}')`;
       closeModal(popups.changeAvatar.popup);
-    })
-    .catch((err) => {
-      console.error(`Ошибка: ${err}`);
-    })
-    .finally(() => {
-      renderLoading(false, evt.submitter);
     })
   }
   handleSubmit(makeRequest, evt);
@@ -79,14 +67,7 @@ function handleNewCardFormSubmit(evt) {
       placesList.prepend(
         createCard(data, userId, removeCard, toggleLike, openImage)
       );
-      addCardForm.reset();
       closeModal(popups.addCard.popup);
-    })
-    .catch((err) => {
-      console.error(`Ошибка: ${err}`);
-    })
-    .finally(() => {
-      renderLoading(false, evt.submitter);
     })
   }
   handleSubmit(makeRequest, evt)
